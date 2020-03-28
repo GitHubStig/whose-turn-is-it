@@ -1,21 +1,11 @@
 const path = require('path');
-
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
-const { HotModuleReplacementPlugin } = require('webpack')
 
 module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
-  },
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    publicPath: 'http://localhost:2000/',
-    port: 2000,
-    hot: true,
-    open: true,
-    historyApiFallback: true
   },
   module: {
     rules: [
@@ -47,7 +37,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new HotModuleReplacementPlugin(),
     new VueLoaderPlugin()
   ]
 };

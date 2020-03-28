@@ -8,6 +8,7 @@ export default {
         { name: 'Anna', active: false },
         { name: 'Dick', active: false },
         { name: 'Tien Yu', active: false },
+        { name: 'Bro Yeap', active: false },
       ]
     }
   },
