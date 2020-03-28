@@ -4,13 +4,10 @@ export default {
       persons: [
         { name: 'Colin', active: false },
         { name: 'Hye Won', active: false },
-        { name: 'Elijah', active: false },
-        { name: 'Elijah again', active: false },
+        { name: 'Elijah', active: true },
         { name: 'Anna', active: false },
         { name: 'Dick', active: false },
         { name: 'Tien Yu', active: false },
-        { name: 'harro ', active: false },
-
       ]
     }
   },
@@ -30,6 +27,7 @@ export default {
           const prevIndex = activeIndex === 0
             ? this.persons.length - 1
             : activeIndex - 1
+          // 3. set the next person as active
           this.persons[prevIndex].active = true;
         } break;
 
@@ -44,6 +42,7 @@ export default {
           const nextIndex = activeIndex === this.persons.length - 1
             ? 0
             : activeIndex + 1
+          // 3. set the next person as active
           this.persons[nextIndex].active = true;
         } break;
       }
