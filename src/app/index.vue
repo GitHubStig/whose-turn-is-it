@@ -10,7 +10,7 @@
         }"
         :data-index="index"
         @click="onPersonClick">
-        {{ person.name }}
+        {{ index + 1 }}. {{ person.name }}
       </li>
     </ol>
   </div>

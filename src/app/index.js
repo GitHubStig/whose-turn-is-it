@@ -2,13 +2,25 @@ export default {
   data() {
     return {
       persons: [
-        { name: 'Colin', active: false },
-        { name: 'Hye Won', active: false },
-        { name: 'Elijah', active: true },
-        { name: 'Anna', active: false },
-        { name: 'Dick', active: false },
-        { name: 'Tien Yu', active: false },
+        { name: 'Bro Dick Khoo', active: false },
+        { name: 'Sis Sock Inn Tan', active: false },
+        { name: 'Bro Tien Yu', active: false },
         { name: 'Bro Yeap', active: false },
+        { name: 'Sis Pat', active: false },
+        { name: 'Bro Wee Hee', active: false },
+        { name: 'Sis Fei Fei', active: false },
+        { name: 'Bro Colin Peh', active: false },
+        { name: 'Bro Aaron Chang', active: false },
+        { name: 'Bro David Teoh', active: false },
+        { name: 'Sis Anna', active: false },
+        { name: 'Sis Ee Lin Teoh', active: false },
+        { name: 'Sis Tai Pin', active: false },
+        { name: 'Sis Hye Won', active: false },
+        { name: 'Bro Elijah', active: false },
+        // { name: 'Bro Teoh', active: false },
+        { name: 'Sis Rhymes', active: false },
+        { name: 'Bro Jonathan', active: false },
+        // { name: 'Sis Soon Ling', active: false },
       ]
     }
   },
@@ -53,9 +65,10 @@ export default {
     onPersonClick: function(e) {
       const targetIndex = e.target.dataset['index']
       if (targetIndex !== undefined) {
-        this.persons.forEach(person => person.active = false)
         const index = parseInt(targetIndex)
-        this.persons[index].active = true
+        const previousActiveValue = this.persons[index].active
+        this.persons.forEach(person => person.active = false)
+        this.persons[index].active = !previousActiveValue
       }
     }
   }
