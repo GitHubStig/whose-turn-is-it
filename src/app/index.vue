@@ -1,10 +1,12 @@
+<script src="./index.js"></script>
+
 <template>
   <div>
     <ol class="list-group">
       <li
         v-for="(person, index) in persons"
         :key="person.name"
-        class="list-group-item"
+        class="list-group-item pt-2 pb-2"
         :class="{
           'active': person.active
         }"
@@ -15,4 +17,3 @@
     </ol>
   </div>
 </template>
-<script src="./index.js"></script>

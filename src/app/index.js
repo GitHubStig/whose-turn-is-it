@@ -9,36 +9,37 @@ export default {
         { name: 'Bro Yeap', active: false },
         { name: 'Sis Pat', active: false },
         { name: 'Bro Wee Hee', active: false },
-        { name: 'Sis Pei Fei', active: false },
-        { name: 'Bro Joseph Teoh', active: false },
+        // { name: 'Sis Pei Fei', active: false },
+        // { name: 'Bro Joseph Teoh', active: false },
         { name: 'Bro Colin Peh', active: false },
         { name: 'Bro Aaron Chang', active: false },
-        // { name: 'Bro Chuah Lean Sneah', active: false },
+        { name: 'Bro Chuah Lean Sneah', active: false },
         // { name: 'Bro Yew', active: false },
         // { name: 'Sis Joelynn', active: false },
         { name: 'Bro David Teoh', active: false },
         { name: 'Sis Anna', active: false },
+        { name: 'Bro Teoh', active: false },
         // { name: 'Sis Guat Bee', active: false },
         { name: 'Sis Lim Beng Ee', active: false },
         { name: 'Sis Lay Hong', active: false },
-        // { name: 'Bro Teoh', active: false },
         // { name: 'Sis Ma (Susan)', active: false },
+        { name: 'Sis Mary', active: false },
         { name: 'Sis Ee Lin Teoh', active: false },
         { name: 'Sis Iris', active: false },
         { name: 'Sis Tai Pin', active: false },
         { name: 'Sis Hye Won', active: false },
         { name: 'Bro Elijah', active: false },
-        // { name: 'Bro Jonathan', active: false },
+        { name: 'Bro Jonathan', active: false },
         // { name: 'Sis Rhymes', active: false },
         // { name: 'Sis Soon Ling', active: false },
       ]
     }
   },
-  mounted: function() {
+  mounted: function () {
     console.log('mounted')
 
     document.addEventListener('keydown', (e) => {
-      switch(e.key) {
+      switch (e.key) {
         case 'ArrowUp': {
           const activeIndex = this.persons.findIndex(person => person.active === true)
           if (activeIndex === -1) {
@@ -72,7 +73,7 @@ export default {
     })
   },
   methods: {
-    onPersonClick: function(e) {
+    onPersonClick: function (e) {
       const targetIndex = e.target.dataset['index']
       if (targetIndex !== undefined) {
         const index = parseInt(targetIndex)
